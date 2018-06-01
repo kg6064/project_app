@@ -1,6 +1,8 @@
 package com.project.service;
 
 import com.project.DAO.AdminServiceDAO;
+import com.project.Model.RequestEntity.CreateUserRequest;
+import com.project.Model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,5 +20,9 @@ public class AdminService {
     public List<String> getAllUsers(){
         return adminServiceDAO
                 .getUserList();
+    }
+
+    public User createUserService(CreateUserRequest createUserRequest){
+        return null;
     }
 }

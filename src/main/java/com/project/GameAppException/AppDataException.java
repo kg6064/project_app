@@ -8,11 +8,8 @@ public class AppDataException extends Exception{
     private String customMessage;
     private int errorCode;
 
-    public AppDataException() {
-    }
-
     public AppDataException(String message) {
-        this.customMessage = message;
+        super(message);
     }
 
     public AppDataException(String customMessage, int errorCode){

@@ -35,6 +35,7 @@ public class AdminServiceDAOImpl implements AdminServiceDAO{
             LOGGER.info("executing query {}.",query);
             List<String> userList =  jdbcTemplate.queryForList(query,String.class);
             LOGGER.info("found {} users.",userList.size());
+            return userList;
         }catch (Exception e){
             LOGGER.error("Inside AdminServiceDAOImpl -- getUserList Exception.",e);
         }
